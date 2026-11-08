@@ -95,7 +95,3 @@ The original CSV is downloaded when you start the application; the dataset is **
 ## GitHub submission
 
 Commit `app.py`, `requirements.txt`, `README.md`, `.gitignore`, and the `CV/` folder (LaTeX sources, photo, and compiled PDFs). If your professor requires an online application, deploy the repository through [Streamlit Community Cloud](https://share.streamlit.io/) and submit both the GitHub URL and the app URL.
-
-## AI assistance disclosure
-
-This project (notebook, Streamlit app, and supporting write-ups) was built with the help of an AI assistant (Claude, Anthropic), used for code structure, chart design, and parts of the written analysis. Disclosed here for transparency.
