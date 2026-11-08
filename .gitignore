@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+_shots/
+CV/*.aux
+CV/*.log
+CV/*.out
+CV/*.fls
+CV/*.fdb_latexmk
+CV/*.synctex.gz

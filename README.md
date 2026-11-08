@@ -1,11 +1,12 @@
-# NYC Taxi Explorer — Streamlit Dashboard + CV
+# NYC Taxi Explorer: Streamlit Dashboard + CV
 
 **Student:** KARAKOZIAN · **Student ID:** 20231654 · **Class:** BDML2 · **Year:** 2026
 
-An interactive NYC taxi trip analysis using Streamlit, Pandas and Plotly, plus an editable CV page. This submission is named for the **20-mark Streamlit option**. Confirm any additional CV/course content required by your instructor.
+An interactive, bilingual (French/English) NYC taxi trip analysis using Streamlit, Pandas and Plotly, plus a CV page. This submission is named for the **20-mark Streamlit option**. Confirm any additional course content required by your instructor.
 
 ## Features
 
+- Bilingual interface (French/English): click the 🇫🇷/🇬🇧 flag buttons in the sidebar to switch — every page, chart, filter and label is translated
 - Dashboard with date, hour, weekday and trip distance filters
 - KPI cards (trip count, distance, duration, implied speed)
 - Hourly and weekday demand charts
@@ -13,7 +14,7 @@ An interactive NYC taxi trip analysis using Streamlit, Pandas and Plotly, plus a
 - Interactive pickup map (Carto Positron)
 - Raw missingness and data-cleaning summary
 - Data-aware business insights and CSV / HTML figure downloads
-- Editable CV page with Markdown export (replace placeholders before submitting)
+- CV page with the current CV content in both languages, plus a PDF download of the matching LaTeX-built CV (`CV/CV_KARAKOZIAN_Varoujan_FR.pdf` / `_EN.pdf`)
 
 ## Project structure
 
@@ -93,4 +94,8 @@ The original CSV is downloaded when you start the application; the dataset is **
 
 ## GitHub submission
 
-Commit `app.py`, `requirements.txt`, `README.md`, and `.gitignore`. Replace the CV template text before final submission. If your professor requires an online application, deploy the repository through [Streamlit Community Cloud](https://share.streamlit.io/) and submit both the GitHub URL and the app URL.
+Commit `app.py`, `requirements.txt`, `README.md`, `.gitignore`, and the `CV/` folder (LaTeX sources, photo, and compiled PDFs). If your professor requires an online application, deploy the repository through [Streamlit Community Cloud](https://share.streamlit.io/) and submit both the GitHub URL and the app URL.
+
+## AI assistance disclosure
+
+This project (notebook, Streamlit app, and supporting write-ups) was built with the help of an AI assistant (Claude, Anthropic), used for code structure, chart design, and parts of the written analysis. Disclosed here for transparency.
