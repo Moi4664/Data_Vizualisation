@@ -6,7 +6,6 @@ from __future__ import annotations
 
 from pathlib import Path
 import pandas as pd
-import numpy as np
 import plotly.express as px
 import streamlit as st
 
@@ -27,13 +26,13 @@ CHECK_KEYS = ["valid_time", "distance_range", "duration_range", "location_box", 
 
 CV_CONTENT = {
     "fr": {
-        "role": "Apprenti Ingénieur IA — Dassault Systèmes",
+        "role": "Apprenti Ingénieur IA chez Dassault Systèmes",
         "contact": "+33 7 81 78 53 77  ·  Varoujan.Karakozian@efrei.net  ·  3 rue des Œillets, 94140 Alfortville  ·  03/11/2005",
         "profile_header": "Profil",
         "profile": "Apprenti ingénieur en 2ᵉ année de cycle ingénieur à l'EFREI Paris, spécialisation **Big Data & Machine Learning (BDML)**. En alternance de trois ans (2025-2028) chez **Dassault Systèmes**, au sein d'une équipe R&D DevSecOps dédiée à l'assistance IA des développeurs internes, où je développe des outils reposant sur les protocoles **MCP** et **RAG**.",
         "education_header": "Formation",
         "education": [
-            ("Cycle Ingénieur — spécialisation Big Data & Machine Learning", "EFREI Paris (en alternance)", "2025 – 2028", "2ᵉ année en cours."),
+            ("Cycle Ingénieur, spécialisation Big Data & Machine Learning", "EFREI Paris (en alternance)", "2025 – 2028", "2ᵉ année en cours."),
             ("Classe préparatoire intégrée internationale (anglais)", "EFREI Paris", "", ""),
             ("Baccalauréat, mention Bien", "Lycée Sainte-Marie, Créteil", "", ""),
         ],
@@ -41,7 +40,7 @@ CV_CONTENT = {
         "experience": [
             {
                 "title": "Apprenti Ingénieur IA",
-                "place": "Dassault Systèmes — Vélizy-Villacoublay",
+                "place": "Dassault Systèmes, Vélizy-Villacoublay",
                 "dates": "Sept. 2025 – Juin 2028",
                 "bullets": [
                     "Développement d'outils **MCP** (Model Context Protocol) connectant un assistant de code IA aux systèmes internes : détection automatique du contexte de versionnement, récupération de métadonnées de build, collecte de données via scraping web automatisé (Selenium).",
@@ -52,7 +51,7 @@ CV_CONTENT = {
             },
             {
                 "title": "Stage Commercial",
-                "place": "Lacoste — Créteil",
+                "place": "Lacoste, Créteil",
                 "dates": "2025 (1 mois)",
                 "bullets": [
                     "Accueil et conseil des clients, recommandations personnalisées adaptées à leurs besoins.",
@@ -60,8 +59,8 @@ CV_CONTENT = {
                 ],
             },
             {
-                "title": "Stage Ouvrier — Préparateur de commande",
-                "place": "Phoenix Pharma — Créteil",
+                "title": "Stage Ouvrier (préparateur de commande)",
+                "place": "Phoenix Pharma, Créteil",
                 "dates": "2024 (1 mois)",
                 "bullets": [
                     "Gestion logistique : préparation et vérification de commandes pharmaceutiques.",
@@ -71,8 +70,8 @@ CV_CONTENT = {
         ],
         "projects_header": "Projets académiques",
         "projects_recent": [
-            ("NYC Taxi — Data Visualization & Business Intelligence", "2026", "Analyse exploratoire de courses de taxi new-yorkaises (Python, Pandas, Plotly, Streamlit) : nettoyage de données, visualisations interactives, dashboard de BI avec KPIs. *(Ce projet.)*"),
-            ("Classification de la qualité du vin — Machine Learning", "2026", "Comparaison de plusieurs modèles (Random Forest, SVM, etc.) pour prédire la qualité d'un vin à partir de ses caractéristiques physico-chimiques."),
+            ("NYC Taxi: Data Visualization & Business Intelligence", "2026", "Analyse exploratoire de courses de taxi new-yorkaises (Python, Pandas, Plotly, Streamlit) : nettoyage de données, visualisations interactives, dashboard de BI avec KPIs. *(Ce projet.)*"),
+            ("Classification de la qualité du vin : Machine Learning", "2026", "Comparaison de plusieurs modèles (Random Forest, SVM, etc.) pour prédire la qualité d'un vin à partir de ses caractéristiques physico-chimiques."),
         ],
         "projects_earlier_label": "Projets antérieurs",
         "projects_earlier": "**Analyse du changement climatique** (2025) : ACP de A à Z, corrélation inégalité/pollution nationale. **Voll'Effrei** (2025) : jeu vidéo de volley-ball, projet interdisciplinaire physique/informatique. **Chatbot intelligent** (2024) : chatbot Python basé sur l'analyse TF-IDF. **CDataFrame** (2024) : DataFrame en langage C inspiré de Pandas.",
@@ -85,20 +84,20 @@ CV_CONTENT = {
             ("Soft skills", ["Travail en équipe", "Capacité d'adaptation", "Autodidacte", "Sens de l'initiative", "Créatif", "Autonomie", "Polyvalent"]),
         ],
         "languages_header": "Langues",
-        "languages": ["Français — Langue maternelle", "Anglais — Avancé B2", "Arménien — Intermédiaire B1", "Espagnol — Intermédiaire B1"],
+        "languages": ["Français : langue maternelle", "Anglais : avancé B2", "Arménien : intermédiaire B1", "Espagnol : intermédiaire B1"],
         "hobbies_header": "Loisirs",
         "hobbies": ["Musique", "Escalade", "Échecs", "Basketball"],
         "download_label": "📄 Télécharger le CV (PDF)",
         "pdf_file": "CV_KARAKOZIAN_Varoujan_FR.pdf",
     },
     "en": {
-        "role": "AI Engineer Apprentice — Dassault Systèmes",
+        "role": "AI Engineer Apprentice at Dassault Systèmes",
         "contact": "+33 7 81 78 53 77  ·  Varoujan.Karakozian@efrei.net  ·  3 rue des Œillets, 94140 Alfortville, France  ·  Born 3 Nov 2005",
         "profile_header": "Profile",
         "profile": "Second-year engineering student at EFREI Paris, specializing in **Big Data & Machine Learning (BDML)**. Currently on a three-year work-study program (2025-2028) with **Dassault Systèmes**, in an R&D DevSecOps team building AI tooling for internal developers, working with **MCP** and **RAG**.",
         "education_header": "Education",
         "education": [
-            ("Engineering Cycle — Big Data & Machine Learning specialization", "EFREI Paris (work-study)", "2025 – 2028", "2nd year in progress."),
+            ("Engineering Cycle, Big Data & Machine Learning specialization", "EFREI Paris (work-study)", "2025 – 2028", "2nd year in progress."),
             ("International Preparatory Classes (English track)", "EFREI Paris", "", ""),
             ("Baccalauréat (French high-school diploma), High Honors", "Lycée Sainte-Marie, Créteil", "", ""),
         ],
@@ -106,7 +105,7 @@ CV_CONTENT = {
         "experience": [
             {
                 "title": "AI Engineer Apprentice",
-                "place": "Dassault Systèmes — Vélizy-Villacoublay, France",
+                "place": "Dassault Systèmes, Vélizy-Villacoublay, France",
                 "dates": "Sept. 2025 – Jun 2028",
                 "bullets": [
                     "Built **MCP** (Model Context Protocol) tools connecting an AI coding assistant to internal systems: automatic version-control context detection, build metadata retrieval, automated web-scraping data collection (Selenium).",
@@ -117,7 +116,7 @@ CV_CONTENT = {
             },
             {
                 "title": "Sales Internship",
-                "place": "Lacoste — Créteil, France",
+                "place": "Lacoste, Créteil, France",
                 "dates": "2025 (1 month)",
                 "bullets": [
                     "Welcomed and advised customers, providing personalized recommendations tailored to their needs.",
@@ -125,8 +124,8 @@ CV_CONTENT = {
                 ],
             },
             {
-                "title": "Warehouse Internship — Order Picker",
-                "place": "Phoenix Pharma — Créteil, France",
+                "title": "Warehouse Internship (Order Picker)",
+                "place": "Phoenix Pharma, Créteil, France",
                 "dates": "2024 (1 month)",
                 "bullets": [
                     "Logistics: preparing and checking pharmaceutical orders.",
@@ -136,8 +135,8 @@ CV_CONTENT = {
         ],
         "projects_header": "Academic Projects",
         "projects_recent": [
-            ("NYC Taxi — Data Visualization & Business Intelligence", "2026", "Exploratory analysis of NYC taxi trips (Python, Pandas, Plotly, Streamlit): data cleaning, interactive visualizations, BI dashboard with KPIs. *(This project.)*"),
-            ("Wine Quality Classification — Machine Learning", "2026", "Compared multiple models (Random Forest, SVM, etc.) to predict wine quality from physicochemical features."),
+            ("NYC Taxi: Data Visualization & Business Intelligence", "2026", "Exploratory analysis of NYC taxi trips (Python, Pandas, Plotly, Streamlit): data cleaning, interactive visualizations, BI dashboard with KPIs. *(This project.)*"),
+            ("Wine Quality Classification: Machine Learning", "2026", "Compared multiple models (Random Forest, SVM, etc.) to predict wine quality from physicochemical features."),
         ],
         "projects_earlier_label": "Earlier projects",
         "projects_earlier": "**Climate Change Data Analysis** (2025): full PCA pipeline showing a correlation between inequality and national pollution. **Voll'Effrei** (2025): volleyball video game, interdisciplinary physics/CS project. **Intelligent Chatbot** (2024): Python chatbot based on TF-IDF analysis. **CDataFrame** (2024): a C-language DataFrame inspired by Pandas.",
@@ -150,7 +149,7 @@ CV_CONTENT = {
             ("Soft skills", ["Teamwork", "Adaptability", "Self-taught", "Initiative", "Creative", "Autonomous", "Versatile"]),
         ],
         "languages_header": "Languages",
-        "languages": ["French — Native", "English — Advanced (B2)", "Armenian — Intermediate (B1)", "Spanish — Intermediate (B1)"],
+        "languages": ["French: Native", "English: Advanced (B2)", "Armenian: Intermediate (B1)", "Spanish: Intermediate (B1)"],
         "hobbies_header": "Hobbies",
         "hobbies": ["Music", "Climbing", "Chess", "Basketball"],
         "download_label": "📄 Download CV (PDF)",
@@ -472,22 +471,22 @@ if page == "cv":
 
         st.subheader(cv["education_header"])
         for title, place, dates, note in cv["education"]:
-            line = f"**{title}**  \n{place}" + (f"  —  *{dates}*" if dates else "")
+            line = f"**{title}**  \n{place}" + (f", *{dates}*" if dates else "")
             st.markdown(line)
             if note:
                 st.caption(note)
 
         st.subheader(cv["experience_header"])
         for job in cv["experience"]:
-            st.markdown(f"**{job['title']}**  \n{job['place']}  —  *{job['dates']}*")
+            st.markdown(f"**{job['title']}**  \n{job['place']}, *{job['dates']}*")
             for b in job["bullets"]:
                 st.markdown(f"- {b}")
 
         st.subheader(cv["projects_header"])
         for title, dates, desc in cv["projects_recent"]:
-            st.markdown(f"**{title}**  —  *{dates}*")
+            st.markdown(f"**{title}** ({dates})")
             st.markdown(f"- {desc}")
-        st.markdown(f"**{cv['projects_earlier_label']}** — {cv['projects_earlier']}")
+        st.markdown(f"**{cv['projects_earlier_label']}:** {cv['projects_earlier']}")
 
     with side_col:
         st.subheader(cv["skills_header"])
@@ -512,8 +511,10 @@ if page == "about":
     st.stop()
 
 try:
-    raw = load_raw()
-    df, quality = clean_data(raw)
+    with st.spinner(t["loading_raw"]):
+        raw = load_raw()
+    with st.spinner(t["loading_clean"]):
+        df, quality = clean_data(raw)
 except Exception as exc:
     st.error(t["load_error_title"].format(exc=exc))
     st.info(t["load_error_hint"])

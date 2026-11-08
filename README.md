@@ -2,7 +2,7 @@
 
 **Student:** KARAKOZIAN · **Student ID:** 20231654 · **Class:** BDML2 · **Year:** 2026
 
-An interactive, bilingual (French/English) NYC taxi trip analysis using Streamlit, Pandas and Plotly, plus a CV page. This submission is named for the **20-mark Streamlit option**. Confirm any additional course content required by your instructor.
+An interactive, bilingual (French/English) NYC taxi trip analysis using Streamlit, Pandas and Plotly, plus a CV page.
 
 ## Features
 
@@ -19,11 +19,17 @@ An interactive, bilingual (French/English) NYC taxi trip analysis using Streamli
 ## Project structure
 
 ```text
-TP_CV_D2_20231654_BDML2/
+.
 ├── app.py
 ├── requirements.txt
 ├── README.md
-└── .gitignore
+├── .gitignore
+├── DataViz_20231654_KARAKOZIAN2026BDML2.ipynb
+├── images/              # figures exported by the notebook
+└── CV/
+    ├── cv_fr.tex / cv_en.tex / cvstyle.sty
+    ├── photo.png
+    └── CV_KARAKOZIAN_Varoujan_FR.pdf / _EN.pdf
 ```
 
 ## Installation
@@ -31,8 +37,8 @@ TP_CV_D2_20231654_BDML2/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-cd YOUR_REPOSITORY
+git clone https://github.com/Moi4664/Data_Vizualisation.git
+cd Data_Vizualisation
 ```
 
 ### 2. Create a virtual environment
@@ -92,6 +98,6 @@ The original CSV is downloaded when you start the application; the dataset is **
 - Insights are descriptive for this sample, **not** representative NYC-wide taxi traffic estimates.
 - Estimated speed is based on reported trip distance and duration and cannot prove congestion.
 
-## GitHub submission
+## Deployment
 
-Commit `app.py`, `requirements.txt`, `README.md`, `.gitignore`, and the `CV/` folder (LaTeX sources, photo, and compiled PDFs). If your professor requires an online application, deploy the repository through [Streamlit Community Cloud](https://share.streamlit.io/) and submit both the GitHub URL and the app URL.
+The app can be deployed through [Streamlit Community Cloud](https://share.streamlit.io/) by pointing it at this repository's `app.py`.
